@@ -1,33 +1,36 @@
 body {-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;}
 
       h1 {
-        /* font-family-full-name: Helvetica-Light-300; */
-        font-family: 'Helvetica';
-        font-weight: 300;
+        font-family: 'HelveticaNeue'; /* full name: HelveticaNeue-Bold; */
+        font-weight: 700;
         font-size: 48px;
-        color: rgba(53, 136, 229, 255);
+        color: rgba(46, 47, 48, 255);
       }
 
-      Header 2 {
-        /* font-family-full-name: HelveticaNeue-Medium-500; */
-        font-family: 'HelveticaNeue';
-        font-weight: 500;
+      h2 {
+        font-family: 'HelveticaNeue'; /* full name: HelveticaNeue-Bold; */
+        font-weight: 700;
         font-size: 36px;
         color: rgba(46, 47, 48, 255);
       }
 
-      Header 3 {
-        /* font-family-full-name: HelveticaNeue--400; */
-        font-family: 'HelveticaNeue';
+      h3 {
+        font-family: 'HelveticaNeue'; /* full name: HelveticaNeue-Bold; */
+        font-weight: 700;
+        font-size: 24px;
+        color: rgba(46, 47, 48, 255);
+      }
+
+      li {
+        font-family: 'HelveticaNeue'; /* full name: HelveticaNeue-undefined; */
         font-weight: 400;
         font-size: 24px;
         color: rgba(42, 131, 229, 255);
       }
 
-      List Item Copy {
-        /* font-family-full-name: HelveticaNeue--400; */
-        font-family: 'HelveticaNeue';
-        font-weight: 400;
-        font-size: 24px;
-        color: rgba(42, 131, 229, 255);
+      h1.hero {
+        font-family: 'HelveticaNeue'; /* full name: HelveticaNeue-Bold; */
+        font-weight: 700;
+        font-size: 48px;
+        color: rgba(253, 204, 20, 255);
       }

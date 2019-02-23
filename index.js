@@ -9,11 +9,13 @@ run();
 function run() {
   ns.read('design.sketch').then(sketch => {
     var list = [];
-    var layers = sketch.pages[0].layers;
+    var textStyles = sketch.textStyles;
 
     var styles = ["body {-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;}"];
-    layers.forEach(layer => {
-      var textStyles = layer.style.textStyle.encodedAttributes;
+    textStyles.forEach(styleItem => {
+      var textStyleName = styleItem.name;
+      // console.log(styleItem.value);
+      var textStyles = styleItem.value.textStyle.encodedAttributes;
 
       // colors
       var {alpha, blue, green, red} = textStyles.MSAttributedStringColorAttribute;
@@ -26,9 +28,8 @@ function run() {
       var fontSize = fontStyles.size;
 
       styles.push(`
-      ${layer.name} {
-        /* font-family-full-name: ${fontName.join('-')}; */
-        font-family: '${fontName[0]}';
+      ${textStyleName} {
+        font-family: '${fontName[0]}'; /* full name: ${fontName[0]}-${fontName[1]}; */
         font-weight: ${fontName[2]};
         font-size: ${fontSize}px;
         color: rgba(${rgba.r}, ${rgba.g}, ${rgba.b}, ${rgba.a});

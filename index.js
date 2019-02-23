@@ -1,8 +1,10 @@
+var beautify = require('beautify');
 var chokidar = require('chokidar');
 var color = require('color');
 const translateFontWeight = require('translate-font-weight');
 const fs = require('fs');
 var ns = require('node-sketch')
+const cssConverter = require('styleflux');
 
 run();
 
@@ -37,7 +39,9 @@ function run() {
 
     });
 
-    fs.writeFile('styles.css', styles.join('\n'), (err) => {
+    styles = beautify(styles.join('\n'), {format: "css"});
+
+    fs.writeFile('styles.css', styles, (err) => {
       if (err) console.log(err);
       console.log("Styles written.");
     });

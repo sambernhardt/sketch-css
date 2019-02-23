@@ -9,10 +9,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "beautify": "0.0.8",
     "chokidar": "^2.1.2",
     "color": "^3.1.0",
     "jss": "^9.8.7",
     "node-sketch": "^0.12.2",
+    "styleflux": "^1.2.0",
     "translate-font-weight": "^1.0.0"
   }
 }

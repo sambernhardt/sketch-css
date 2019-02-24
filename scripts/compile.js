@@ -3,6 +3,7 @@ const fs = require('fs');
 var ns = require('node-sketch')
 var compileTextStyles = require('./textStyles');
 var compileLayerStyles = require('./layerStyles');
+var compileSymbolStyles = require('./symbolStyles');
 
 function compile() {
   ns.read('./design.sketch').then(sketch => {
@@ -14,7 +15,7 @@ function compile() {
     compileTextStyles.compile(sketch, function(textStyles) {
       styles = styles.concat(textStyles);
 
-      compileLayerStyles.compile(sketch, function(layerStyles) {
+      compileSymbolStyles.compile(sketch, function(layerStyles) {
         styles = styles.concat(layerStyles);
       })
 

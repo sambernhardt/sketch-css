@@ -1,4 +1,4 @@
-var beautify = require('beautify');
+var beautify = require('cssbeautify');
 var cssConverter = require('styleflux');
 var fs = require('fs');
 var ns = require('node-sketch')
@@ -23,7 +23,7 @@ function compile() {
       // Combine array of lines into string of text
       var combinedStyles = styles.join('\n');
       // Beautify
-      styles = beautify(combinedStyles, {format: "css"});
+      styles = beautify(combinedStyles, {indent: "  "});
     })
 
     // Write CSS to file

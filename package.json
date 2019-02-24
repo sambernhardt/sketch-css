@@ -9,9 +9,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "beautify": "0.0.8",
     "chokidar": "^2.1.2",
     "color": "^3.1.0",
+    "cssbeautify": "^0.3.1",
     "jss": "^9.8.7",
     "node-sketch": "^0.12.2",
     "sass": "^1.17.2",

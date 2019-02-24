@@ -36,20 +36,25 @@ module.exports = {
         size: fontStyles.size
       };
 
-      styleBlock.push(`font-family: '${font.name}'; /* full name: ${font.originalName}; */`)
+      // styleBlock.push(`font-family: '${font.name}'; /* full name: ${font.originalName}; */`)
+      styleBlock.push(`font-family: '${font.name}';`)
       styleBlock.push(`font-weight: ${font.weight};`)
       styleBlock.push(`font-size: ${font.size}px;`)
 
+      // line height
       if (textStylesObject.paragraphStyle.maximumLineHeight) {
         var lineHeight = textStylesObject.paragraphStyle.maximumLineHeight;
         styleBlock.push(`line-height: ${lineHeight};`)
       }
 
+      // letter spacing
       if (textStylesObject.kerning) {
         styleBlock.push(`letter-spacing: ${textStylesObject.kerning}px;`)
       }
 
+      // add final bracket to close style block
       styleBlock.push(`}`)
+      // push style block to list of styles joining attribute lines with line breaks
       styles[device].push(styleBlock.join('\n'))
     });
 

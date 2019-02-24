@@ -6,7 +6,7 @@ module.exports = {
 
     var styles = [];
     symbols.forEach(symbol => {
-      var name = symbol.name.split('::');
+      var name = symbol.name.split(':');
 
       switch(name[0]) {
         case 'input':

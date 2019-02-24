@@ -1,4 +1,5 @@
 var color = require('color');
+var sketchColors = require('./sketchColors');
 const translateFontWeight = require('translate-font-weight');
 const fs = require('fs');
 var ns = require('node-sketch')
@@ -16,13 +17,7 @@ module.exports = {
       var textStyles = styleItem.value.textStyle.encodedAttributes;
 
       // colors
-      var {alpha, blue, green, red} = textStyles.MSAttributedStringColorAttribute;
-      var rgba = {
-        r: Math.round(red * 255),
-        g: Math.round(green * 255),
-        b: Math.round(blue * 255),
-        a: Math.round(alpha * 255)
-      }
+      var textColor = sketchColors.convert(textStyles.MSAttributedStringColorAttribute);
 
       // fonts
       var fontStyles = textStyles.MSAttributedStringFontAttribute.attributes;
@@ -35,7 +30,7 @@ module.exports = {
         font-family: '${fontName[0]}'; /* full name: ${fontName[0]}-${fontName[1]}; */
         font-weight: ${fontName[2]};
         font-size: ${fontSize}px;
-        color: rgba(${rgba.r}, ${rgba.g}, ${rgba.b}, ${rgba.a});
+        color: ${textColor};
       }`);
 
     });

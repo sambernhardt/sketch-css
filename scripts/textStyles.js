@@ -9,46 +9,48 @@ module.exports = {
       Mobile: [`@media only screen and (max-width: 600px) {`]
     };
 
-    sketch.textStyles.forEach(styleItem => {
+    sketch.textStyles.forEach((styleItem, i) => {
       var textStyleName = styleItem.name;
       // get device name
       var device = textStyleName.split('/')[0];
       textStyleName = textStyleName.split('/')[1];
 
+      // initialize style block
+      var styleBlock = [`${textStyleName} {`];
       var textStylesObject = styleItem.value.textStyle.encodedAttributes;
 
       // color
       var textColor = sketchColors.convert(textStylesObject.MSAttributedStringColorAttribute);
+      styleBlock.push(`color: ${textColor};`)
 
       // font
       var fontStyles = textStylesObject.MSAttributedStringFontAttribute.attributes;
       var fontSplit = fontStyles.name.split('-'); //split the name to get the width at the end
+      var fontName = fontSplit[0].split(/(?=[A-Z])/);
+
       var font = {
-        name: fontSplit[0],
+        name: fontName.join(" "),
         originalName: fontStyles.name,
-        weight: translateFontWeight(fontSplit[1]),
+        weight: fontSplit[1] ? translateFontWeight(fontSplit[1]) : 400,
         textWeight: fontSplit[1],
         size: fontStyles.size
       };
-      // fontName[2] = fontName[1] == undefined ? 400 : translateFontWeight(fontName[1]);
 
-      if (device == 'Desktop') {
-        styles['Desktop'].push(`
-          ${textStyleName} {
-            font-family: '${font.name}'; /* full name: ${font.originalName}; */
-            font-weight: ${font.weight};
-            font-size: ${font.size}px;
-            color: ${textColor};
-          }`);
-      } else {
-        styles['Mobile'].push(`
-          ${textStyleName} {
-            font-family: '${font.name}'; /* full name: ${font.originalName}; */
-            font-weight: ${font.weight};
-            font-size: ${font.size}px;
-            color: ${textColor};
-          }`);
+      styleBlock.push(`font-family: '${font.name}'; /* full name: ${font.originalName}; */`)
+      styleBlock.push(`font-weight: ${font.weight};`)
+      styleBlock.push(`font-size: ${font.size}px;`)
+
+      if (textStylesObject.paragraphStyle.maximumLineHeight) {
+        var lineHeight = textStylesObject.paragraphStyle.maximumLineHeight;
+        styleBlock.push(`line-height: ${lineHeight};`)
       }
+
+      if (textStylesObject.kerning) {
+        styleBlock.push(`letter-spacing: ${textStylesObject.kerning}px;`)
+      }
+
+      styleBlock.push(`}`)
+      styles[device].push(styleBlock.join('\n'))
     });
 
     // add closing tag to media query

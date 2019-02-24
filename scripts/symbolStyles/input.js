@@ -1,10 +1,19 @@
+var color = require('color');
+var sketchColors = require('../sketchColors');
+const translateFontWeight = require('translate-font-weight');
+
+function findLayer(layers, layerName) {
+  return layers.filter(layer => layer.name == layerName);
+}
+
 module.exports = {
-  compile: function() {
+  getStyles: function(symbol) {
     var nameSplit = symbol.name.split('::');
     var elementName = nameSplit[0];
-    var pseudo = nameSplit[1];
+    var pseudoSelector = nameSplit[1];
 
-    switch(pseudo) {
+    var style = '';
+    switch(pseudoSelector) {
       case '-webkit-input-placeholder':
         // Text
         var textLayer = findLayer(symbol.layers, 'Text')[0];
@@ -20,13 +29,13 @@ module.exports = {
         fontName[2] = fontName[1] == undefined ? 400 : translateFontWeight(fontName[1]);
         var fontSize = fontStyles.size;
 
-        styles.push(`
+        style = `
           ${symbol.name} {
             font-family: '${fontName[0]}'; /* full name: ${fontName[0]}-${fontName[1]}; */
             font-weight: ${fontName[2]};
             font-size: ${fontSize}px;
             color: ${textColor};
-        }`);
+        }`;
         break;
       case 'focus':
         var backgroundLayer = findLayer(symbol.layers, 'BG')[0];
@@ -36,12 +45,12 @@ module.exports = {
         var borderColor = sketchColors.convert(layerStyle.borders[0].color);
         var borderWidth = layerStyle.borders[0].thickness;
 
-        styles.push(`
+        style = `
           ${symbol.name} {
             border: solid ${borderWidth}px ${borderColor};
             outline: none;
             -webkit-outline: none;
-        }`);
+        }`;
         break;
       default:
         // Background
@@ -76,7 +85,7 @@ module.exports = {
         // Padding
         var padding = [textLayer.frame.y, textLayer.frame.x];
 
-        styles.push(`
+        style = `
           ${elementName} {
             font-family: '${fontName[0]}'; /* full name: ${fontName[0]}-${fontName[1]}; */
             font-weight: ${fontName[2]};
@@ -86,7 +95,9 @@ module.exports = {
             border-radius: ${borderRadius}px;
             border: solid ${borderWidth}px ${borderColor};
             padding: ${padding[0]}px ${padding[1]}px;
-          }`);
+          }`;
     }
+
+    return style;
   }
 }

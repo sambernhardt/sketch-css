@@ -1,10 +1,4 @@
-var color = require('color');
-var sketchColors = require('./sketchColors');
-const translateFontWeight = require('translate-font-weight');
-
-function findLayer(layers, layerName) {
-  return layers.filter(layer => layer.name == layerName);
-}
+var input = require('./symbolStyles/input');
 
 module.exports = {
   compile: function(sketch, callback) {
@@ -12,8 +6,14 @@ module.exports = {
 
     var styles = [];
     symbols.forEach(symbol => {
-      console.log(symbol.name);
+      var name = symbol.name.split('::');
 
+      switch(name[0]) {
+        case 'input':
+          styles.push(input.getStyles(symbol));
+          break;
+        default:
+      }
     });
 
     callback(styles);

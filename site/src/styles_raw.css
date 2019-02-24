@@ -77,8 +77,8 @@ h1 {
 
 h1.hero {
     font-family: 'HelveticaNeue';
- /* full name: HelveticaNeue-Bold; */
-    font-weight: 700;
+ /* full name: HelveticaNeue-Light; */
+    font-weight: 300;
     font-size: 48px;
     color: rgba(247, 118, 0, 1);
 }
@@ -89,15 +89,15 @@ h1.hero {
         font-family: 'HelveticaNeue';
  /* full name: HelveticaNeue-Bold; */
         font-weight: 700;
-        font-size: 12px;
+        font-size: 40px;
         color: rgba(46, 47, 48, 1);
     }
 
     h1.hero {
         font-family: 'HelveticaNeue';
- /* full name: HelveticaNeue-Bold; */
-        font-weight: 700;
-        font-size: 12px;
+ /* full name: HelveticaNeue-Light; */
+        font-weight: 300;
+        font-size: 40px;
         color: rgba(247, 118, 0, 1);
     }
 
@@ -105,7 +105,7 @@ h1.hero {
         font-family: 'HelveticaNeue';
  /* full name: HelveticaNeue-Bold; */
         font-weight: 700;
-        font-size: 12px;
+        font-size: 28px;
         color: rgba(46, 47, 48, 1);
     }
 
@@ -113,7 +113,7 @@ h1.hero {
         font-family: 'HelveticaNeue';
  /* full name: HelveticaNeue-Bold; */
         font-weight: 700;
-        font-size: 12px;
+        font-size: 16px;
         color: rgba(46, 47, 48, 1);
     }
 
@@ -121,7 +121,7 @@ h1.hero {
         font-family: 'HelveticaNeue';
  /* full name: HelveticaNeue-Bold; */
         font-weight: 700;
-        font-size: 12px;
+        font-size: 20px;
         color: rgba(46, 47, 48, 1);
     }
 
@@ -129,7 +129,7 @@ h1.hero {
         font-family: 'HelveticaNeue';
  /* full name: HelveticaNeue-Bold; */
         font-weight: 700;
-        font-size: 12px;
+        font-size: 15px;
         color: rgba(46, 47, 48, 1);
     }
 

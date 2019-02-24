@@ -1,0 +1,176 @@
+$black_1d1e1f: #1d1e1f;
+$darkorange_f77600: #f77600;
+$darkslategrey_2e2f30: #2e2f30;
+$gainsboro_e1e1e1: #e1e1e1;
+$royalblue_007aff: #007aff;
+
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+h2 {
+  color: $darkslategrey_2e2f30;
+  font-family: 'HelveticaNeue';
+  font-size: 36px;
+  font-weight: 700;
+}
+
+h4 {
+  color: $darkslategrey_2e2f30;
+  font-family: 'HelveticaNeue';
+  font-size: 20px;
+  font-weight: 700;
+}
+
+h3 {
+  color: $darkslategrey_2e2f30;
+  font-family: 'HelveticaNeue';
+  font-size: 24px;
+  font-weight: 700;
+}
+
+h5 {
+  color: $darkslategrey_2e2f30;
+  font-family: 'HelveticaNeue';
+  font-size: 16px;
+  font-weight: 700;
+}
+
+h6 {
+  color: $darkslategrey_2e2f30;
+  font-family: 'HelveticaNeue';
+  font-size: 12px;
+  font-weight: 700;
+}
+
+li {
+  color: $darkslategrey_2e2f30;
+  font-family: 'HelveticaNeue';
+  font-size: 14px;
+  font-weight: 400;
+}
+
+p {
+  color: $darkslategrey_2e2f30;
+  font-family: 'HelveticaNeue';
+  font-size: 14px;
+  font-weight: 400;
+}
+
+a {
+  color: $royalblue_007aff;
+  font-family: 'HelveticaNeue';
+  font-size: 14px;
+  font-weight: 400;
+}
+
+h1 {
+  font-family: 'HelveticaNeue';
+  font-weight: 700;
+  font-size: 48px;
+  color: $darkslategrey_2e2f30;
+
+  &.hero {
+    color: $darkorange_f77600;
+    font-family: 'HelveticaNeue';
+    font-size: 48px;
+    font-weight: 700;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-family: 'HelveticaNeue';
+    font-weight: 700;
+    font-size: 12px;
+    color: $darkslategrey_2e2f30;
+
+    &.hero {
+      color: $darkorange_f77600;
+      font-family: 'HelveticaNeue';
+      font-size: 12px;
+      font-weight: 700;
+    }
+  }
+
+  h2 {
+    color: $darkslategrey_2e2f30;
+    font-family: 'HelveticaNeue';
+    font-size: 12px;
+    font-weight: 700;
+  }
+
+  h4 {
+    color: $darkslategrey_2e2f30;
+    font-family: 'HelveticaNeue';
+    font-size: 12px;
+    font-weight: 700;
+  }
+
+  h3 {
+    color: $darkslategrey_2e2f30;
+    font-family: 'HelveticaNeue';
+    font-size: 12px;
+    font-weight: 700;
+  }
+
+  h5 {
+    color: $darkslategrey_2e2f30;
+    font-family: 'HelveticaNeue';
+    font-size: 12px;
+    font-weight: 700;
+  }
+
+  h6 {
+    color: $darkslategrey_2e2f30;
+    font-family: 'HelveticaNeue';
+    font-size: 12px;
+    font-weight: 700;
+  }
+
+  li {
+    color: $darkslategrey_2e2f30;
+    font-family: 'HelveticaNeue';
+    font-size: 12px;
+    font-weight: 400;
+  }
+
+  p {
+    color: $darkslategrey_2e2f30;
+    font-family: 'HelveticaNeue';
+    font-size: 12px;
+    font-weight: 400;
+  }
+
+  a {
+    color: $royalblue_007aff;
+    font-family: 'HelveticaNeue';
+    font-size: 12px;
+    font-weight: 400;
+  }
+}
+
+input {
+  font-family: 'HelveticaNeue';
+  font-weight: 400;
+  font-size: 15px;
+  color: $darkslategrey_2e2f30;
+  background-color: white;
+  border-radius: 4px;
+  border: solid 1px $gainsboro_e1e1e1;
+  padding: 10px 13px;
+
+  &:-webkit-input-placeholder {
+    color: $black_1d1e1f;
+    font-family: 'HelveticaNeue';
+    font-size: 15px;
+    font-weight: undefined;
+  }
+
+  &:focus {
+    -webkit-outline: none;
+    border: solid 1px black;
+            outline: none;
+  }
+}

@@ -1,9 +1,11 @@
 var beautify = require('beautify');
 const fs = require('fs');
 var ns = require('node-sketch')
+var cssConverter = require('styleflux');
 var compileTextStyles = require('./textStyles');
 var compileLayerStyles = require('./layerStyles');
 var compileSymbolStyles = require('./symbolStyles');
+var sass = require('sass');
 
 function compile() {
   ns.read('./design.sketch').then(sketch => {
@@ -22,9 +24,10 @@ function compile() {
       styles = beautify(styles.join('\n'), {format: "css"});
     })
 
+    // write raw file
     fs.writeFile('./site/styles.css', styles, (err) => {
       if (err) console.log(err);
-      console.log("Styles written.");
+      console.log("CSS written.");
     });
   })
 }

@@ -22,7 +22,7 @@ module.exports = {
       var pseudo = nameSplit[1];
 
       switch(pseudo) {
-        case 'placeholder':
+        case '-webkit-input-placeholder':
           // Text
           var textLayer = findLayer(symbol.layers, 'Text')[0];
           var textStyle = textLayer.style.textStyle.encodedAttributes;
@@ -56,6 +56,8 @@ module.exports = {
           styles.push(`
             ${symbol.name} {
               border: solid ${borderWidth}px ${borderColor};
+              outline: none;
+              -webkit-outline: none;
           }`);
           break;
         default:

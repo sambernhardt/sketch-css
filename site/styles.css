@@ -1,47 +1,47 @@
 h2 {
-  color: rgba(46, 47, 48, 1);
+  color: rgba(94, 101, 109, 1);
   font-family: 'Helvetica Neue';
   font-weight: 400;
   font-size: 36px;
 }
 
 h4 {
-  color: rgba(46, 47, 48, 1);
+  color: rgba(94, 101, 109, 1);
   font-family: 'Helvetica Neue';
   font-weight: 400;
   font-size: 20px;
 }
 
 h3 {
-  color: rgba(46, 47, 48, 1);
+  color: rgba(94, 101, 109, 1);
   font-family: 'Helvetica Neue';
   font-weight: 400;
   font-size: 24px;
 }
 
 h5 {
-  color: rgba(46, 47, 48, 1);
+  color: rgba(94, 101, 109, 1);
   font-family: 'Helvetica Neue';
   font-weight: 400;
   font-size: 16px;
 }
 
 h6 {
-  color: rgba(46, 47, 48, 1);
+  color: rgba(94, 101, 109, 1);
   font-family: 'Helvetica Neue';
   font-weight: 400;
   font-size: 12px;
 }
 
 li {
-  color: rgba(46, 47, 48, 1);
+  color: rgba(94, 101, 109, 1);
   font-family: 'Helvetica Neue';
   font-weight: 400;
   font-size: 14px;
 }
 
 p {
-  color: rgba(46, 47, 48, 1);
+  color: rgba(94, 101, 109, 1);
   font-family: 'Helvetica Neue';
   font-weight: 400;
   font-size: 14px;
@@ -55,17 +55,18 @@ a {
 }
 
 h1 {
-  color: rgba(46, 47, 48, 1);
+  color: rgba(94, 101, 109, 1);
   font-family: 'Helvetica Neue';
   font-weight: 400;
   font-size: 48px;
 }
 
 h1.hero {
-  color: rgba(84, 155, 31, 1);
+  color: rgba(52, 166, 253, 1);
   font-family: 'Helvetica Neue';
   font-weight: 400;
   font-size: 48px;
+  letter-spacing: -3px;
 }
 
 @media only screen and (max-width: 600px) {
@@ -156,14 +157,15 @@ input {
 
 input::-webkit-input-placeholder {
   color: rgba(197, 213, 218, 1);
-  font-family: 'Helvetica Neue';
+  font-family: 'Times New Roman P S M T';
   font-weight: 400;
   font-size: 15px;
 }
 
 input:focus {
-  border-radius: 0px;
-  border: solid 1px rgba(0, 0, 0, 1);
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 19px;
+  border: solid 1px rgba(94, 101, 109, 1);
   outline: none;
   -webkit-outline: none;
 }

@@ -61,6 +61,11 @@ module.exports = {
         var backgroundLayer = findLayer(symbol.layers, 'BG')[0];
         var layerStyle = backgroundLayer.style;
 
+        var sketchBackgroundFill = layerStyle.fills[0];
+        var sketchBackgroundColor = layerStyle.fills[0].color;
+        var backgroundColor = sketchBackgroundFill.isEnabled ? sketchColors.convert(layerStyle.fills[0].color) : backgroundColor = 'transparent';
+        styleBlock.push(`background-color: ${backgroundColor};`)
+
         var borderRadius = backgroundLayer.fixedRadius;
         styleBlock.push(`border-radius: ${borderRadius}px;`)
 

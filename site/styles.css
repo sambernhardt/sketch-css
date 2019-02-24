@@ -8,7 +8,7 @@ h1 {
  /* full name: HelveticaNeue-Bold; */
     font-weight: 700;
     font-size: 48px;
-    color: rgba(46, 47, 48, 255);
+    color: rgba(46, 47, 48, 1);
 }
 
 h2 {
@@ -16,7 +16,7 @@ h2 {
  /* full name: HelveticaNeue-Bold; */
     font-weight: 700;
     font-size: 36px;
-    color: rgba(46, 47, 48, 255);
+    color: rgba(46, 47, 48, 1);
 }
 
 h3 {
@@ -24,7 +24,7 @@ h3 {
  /* full name: HelveticaNeue-Bold; */
     font-weight: 700;
     font-size: 24px;
-    color: rgba(46, 47, 48, 255);
+    color: rgba(46, 47, 48, 1);
 }
 
 li {
@@ -32,7 +32,7 @@ li {
  /* full name: HelveticaNeue-undefined; */
     font-weight: 400;
     font-size: 14px;
-    color: rgba(46, 47, 48, 255);
+    color: rgba(46, 47, 48, 1);
 }
 
 h1.hero {
@@ -40,7 +40,7 @@ h1.hero {
  /* full name: HelveticaNeue-Bold; */
     font-weight: 700;
     font-size: 48px;
-    color: rgba(196, 76, 230, 255);
+    color: rgba(196, 76, 230, 1);
 }
 
 p {
@@ -48,7 +48,7 @@ p {
  /* full name: HelveticaNeue-undefined; */
     font-weight: 400;
     font-size: 14px;
-    color: rgba(46, 47, 48, 255);
+    color: rgba(46, 47, 48, 1);
 }
 
 h5 {
@@ -56,7 +56,7 @@ h5 {
  /* full name: HelveticaNeue-Bold; */
     font-weight: 700;
     font-size: 16px;
-    color: rgba(46, 47, 48, 255);
+    color: rgba(46, 47, 48, 1);
 }
 
 h4 {
@@ -64,7 +64,7 @@ h4 {
  /* full name: HelveticaNeue-Bold; */
     font-weight: 700;
     font-size: 20px;
-    color: rgba(46, 47, 48, 255);
+    color: rgba(46, 47, 48, 1);
 }
 
 h6 {
@@ -72,7 +72,7 @@ h6 {
  /* full name: HelveticaNeue-Bold; */
     font-weight: 700;
     font-size: 12px;
-    color: rgba(46, 47, 48, 255);
+    color: rgba(46, 47, 48, 1);
 }
 
 a {
@@ -80,11 +80,5 @@ a {
  /* full name: HelveticaNeue-undefined; */
     font-weight: 400;
     font-size: 14px;
-    color: rgba(0, 122, 255, 255);
-}
-
-input {
-    background-color: transparent;
-    border: solid 1px rgba(182, 183, 183, 255);
-    padding: 14px 16px;
+    color: rgba(0, 122, 255, 1);
 }

@@ -135,9 +135,9 @@ module.exports = {
         style = `
           ${elementName} {
             ${styleBlock.join('\n')};
-            transition-duration: .5s;
-            transition-timing-function: ease-out;
           }`;
+          // transition-duration: .5s;
+          // transition-timing-function: ease-out;
     }
 
     return style;

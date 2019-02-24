@@ -1,8 +1,3 @@
-body {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
 h2 {
     font-family: 'HelveticaNeue';
  /* full name: HelveticaNeue-Bold; */
@@ -45,24 +40,24 @@ h6 {
 
 li {
     font-family: 'HelveticaNeue';
- /* full name: HelveticaNeue-undefined; */
-    font-weight: 400;
+ /* full name: HelveticaNeue; */
+    font-weight: undefined;
     font-size: 14px;
     color: rgba(46, 47, 48, 1);
 }
 
 p {
     font-family: 'HelveticaNeue';
- /* full name: HelveticaNeue-undefined; */
-    font-weight: 400;
+ /* full name: HelveticaNeue; */
+    font-weight: undefined;
     font-size: 14px;
     color: rgba(46, 47, 48, 1);
 }
 
 a {
     font-family: 'HelveticaNeue';
- /* full name: HelveticaNeue-undefined; */
-    font-weight: 400;
+ /* full name: HelveticaNeue; */
+    font-weight: undefined;
     font-size: 14px;
     color: rgba(0, 122, 255, 1);
 }
@@ -143,51 +138,25 @@ h1.hero {
 
     li {
         font-family: 'HelveticaNeue';
- /* full name: HelveticaNeue-undefined; */
-        font-weight: 400;
+ /* full name: HelveticaNeue; */
+        font-weight: undefined;
         font-size: 12px;
         color: rgba(46, 47, 48, 1);
     }
 
     p {
         font-family: 'HelveticaNeue';
- /* full name: HelveticaNeue-undefined; */
-        font-weight: 400;
+ /* full name: HelveticaNeue; */
+        font-weight: undefined;
         font-size: 12px;
         color: rgba(46, 47, 48, 1);
     }
 
     a {
         font-family: 'HelveticaNeue';
- /* full name: HelveticaNeue-undefined; */
-        font-weight: 400;
+ /* full name: HelveticaNeue; */
+        font-weight: undefined;
         font-size: 12px;
         color: rgba(0, 122, 255, 1);
     }
-}
-
-input {
-    font-family: 'HelveticaNeue';
- /* full name: HelveticaNeue-undefined; */
-    font-weight: 400;
-    font-size: 15px;
-    color: rgba(46, 47, 48, 1);
-    background-color: rgba(255, 255, 255, 1);
-    border-radius: 4px;
-    border: solid 1px rgba(225, 225, 225, 1);
-    padding: 10px 13px;
-}
-
-input::-webkit-input-placeholder {
-    font-family: 'HelveticaNeue';
- /* full name: HelveticaNeue-BoldItalic; */
-    font-weight: undefined;
-    font-size: 15px;
-    color: rgba(29, 30, 31, 1);
-}
-
-input::focus {
-    border: solid 1px rgba(0, 0, 0, 1);
-    outline: none;
-    -webkit-outline: none;
 }

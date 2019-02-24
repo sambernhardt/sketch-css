@@ -1,13 +1,8 @@
 var color = require('color');
 var sketchColors = require('./sketchColors');
-const translateFontWeight = require('translate-font-weight');
-const fs = require('fs');
-var ns = require('node-sketch')
-const cssConverter = require('styleflux');
 
 module.exports = {
   compile: function(sketch, callback) {
-    var list = [];
     var layerStyles = sketch.layerStyles;
 
     var styles = [];

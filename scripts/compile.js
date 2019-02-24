@@ -1,27 +1,32 @@
 var beautify = require('beautify');
-const fs = require('fs');
-var ns = require('node-sketch')
 var cssConverter = require('styleflux');
-var compileTextStyles = require('./textStyles');
-var compileLayerStyles = require('./layerStyles');
-var compileSymbolStyles = require('./symbolStyles');
+var fs = require('fs');
+var ns = require('node-sketch')
 var sass = require('sass');
+
+var compileSymbolStyles = require('./symbolStyles');
+var compileTextStyles = require('./textStyles');
 
 function compile() {
   ns.read('./design.sketch').then(sketch => {
     var styles = [];
 
+    // Compile Text Styles
     compileTextStyles.compile(sketch, function(textStyles) {
       styles = styles.concat(textStyles);
 
+      // Compile Symbol Styles
       compileSymbolStyles.compile(sketch, function(layerStyles) {
         styles = styles.concat(layerStyles);
       })
 
-      styles = beautify(styles.join('\n'), {format: "css"});
+      // Combine array of lines into string of text
+      var combinedStyles = styles.join('\n');
+      // Beautify
+      styles = beautify(combinedStyles, {format: "css"});
     })
 
-    // write raw file
+    // Write CSS to file
     fs.writeFile('./site/styles.css', styles, (err) => {
       if (err) console.log(err);
       console.log("CSS written.");

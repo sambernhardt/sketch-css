@@ -9,10 +9,7 @@ var sass = require('sass');
 
 function compile() {
   ns.read('./design.sketch').then(sketch => {
-    var list = [];
-
-    var styles = ["body {-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;}"];
-    // console.log(sketch);
+    var styles = [];
 
     compileTextStyles.compile(sketch, function(textStyles) {
       styles = styles.concat(textStyles);

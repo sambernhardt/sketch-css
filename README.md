@@ -8,7 +8,7 @@ In a second terminal tab run:
 ```live-server``` to get live updates on the sketch file changes
 
 ### Styles are pulled from Sketch Text styles
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+![alt text](https://github.com/sambernhardt/sketch-css/blob/master/readme-1.gif "Image 1")
 
 ### Mobile Styles can also be defined
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+![alt text](https://github.com/sambernhardt/sketch-css/blob/master/readme-2.gif "Image 2")
